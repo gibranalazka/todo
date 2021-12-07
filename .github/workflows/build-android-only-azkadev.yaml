@@ -23,9 +23,7 @@ jobs:
           cd example
           flutter pub get
       - name: Build Android App
-        run: |
-          cd example
-          flutter build apk --release --split-per-abi
+        run: flutter build apk --release --split-per-abi
       - name: Release Apps
         uses: ncipollo/release-action@v1
         with:
