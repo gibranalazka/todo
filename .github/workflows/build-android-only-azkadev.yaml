@@ -19,9 +19,7 @@ jobs:
         with:
           channel: 'stable'
       - name: Install pub Dependencies
-        run: |
-          cd example
-          flutter pub get
+        run: flutter pub get
       - name: Build Android App
         run: flutter build apk --release --split-per-abi
       - name: Release Apps
